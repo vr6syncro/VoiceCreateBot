@@ -13,7 +13,7 @@ client = discord.Client()
 
 bot = commands.Bot(command_prefix=".")
 bot.remove_command("help")
-DISCORD_TOKEN = 'Enter Discord Token here'
+DISCORD_TOKEN = 'Secret Code Here'
 
 initial_extensions = ['cogs.voice']
 
@@ -31,5 +31,9 @@ async def on_ready():
     print(bot.user.name)
     print(bot.user.id)
     print('------')
+
+game=discord.Game(name="Fapping Simulator")
+bot.activity = game
+
 
 bot.run(DISCORD_TOKEN)
